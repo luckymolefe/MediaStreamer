@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.3.11
+- http://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: Dec 06, 2017 at 05:02 PM
+- Server version: 5.6.24
+- PHP Version: 5.6.8
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="http://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="mediastreamer" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="comments">
+                CREATE TABLE `comments` (
+                  `user_id` int(11) NOT NULL,
+                  `comments` text NOT NULL,
+                  `email` varchar(55) NOT NULL,
+                  `created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                  `modified` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+                  UNIQUE KEY `created` (`created`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="likes">
+                CREATE TABLE `likes` (
+                  `user_id` int(11) NOT NULL,
+                  `media_id` int(11) NOT NULL,
+                  `created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                  UNIQUE KEY `created` (`created`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="media">
+                CREATE TABLE `media` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `user_id` int(11) NOT NULL,
+                  `media_url` varchar(255) NOT NULL,
+                  `description` text NOT NULL,
+                  `created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                  `modified` datetime NOT NULL ON UPDATE CURRENT_TIMESTAMP,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="playlist">
+                CREATE TABLE `playlist` (
+                  `media_id` int(11) NOT NULL,
+                  `user_id` int(11) NOT NULL,
+                  `media_url` varchar(255) NOT NULL,
+                  `created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                  UNIQUE KEY `created` (`created`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="recovery">
+                CREATE TABLE `recovery` (
+                  `id` int(11) NOT NULL,
+                  `email` varchar(255) NOT NULL,
+                  `data` varchar(40) NOT NULL,
+                  `expiryDate` date NOT NULL,
+                  `created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="users">
+                CREATE TABLE `users` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `firstname` varchar(55) NOT NULL,
+                  `lastname` varchar(55) NOT NULL,
+                  `username` varchar(55) NOT NULL,
+                  `email` varchar(55) NOT NULL,
+                  `password` varchar(60) NOT NULL,
+                  `status` tinyint(1) NOT NULL DEFAULT '0',
+                  `created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'mediastreamer'
+    -->
+    <database name="mediastreamer">
+        <!-- Table comments -->
+        <!-- Table likes -->
+        <table name="likes">
+            <column name="user_id">1</column>
+            <column name="media_id">5</column>
+            <column name="created">2017-12-01 01:57:46</column>
+        </table>
+        <!-- Table media -->
+        <table name="media">
+            <column name="id">1</column>
+            <column name="user_id">1</column>
+            <column name="media_url">David_Guetta_Memories.mp3</column>
+            <column name="description">Listen to this hit by david guetta</column>
+            <column name="created">2017-11-27 18:57:33</column>
+            <column name="modified">0000-00-00 00:00:00</column>
+        </table>
+        <table name="media">
+            <column name="id">2</column>
+            <column name="user_id">1</column>
+            <column name="media_url">bmwracing.mp4</column>
+            <column name="description">Watch this hot race lambo and bmw M5</column>
+            <column name="created">2017-11-27 19:08:21</column>
+            <column name="modified">0000-00-00 00:00:00</column>
+        </table>
+        <table name="media">
+            <column name="id">3</column>
+            <column name="user_id">1</column>
+            <column name="media_url">Brutal Sounding Porsche PanameraS.mp4</column>
+            <column name="description">Listen to this ravaging Porsche with brutal sound</column>
+            <column name="created">2017-11-27 19:40:24</column>
+            <column name="modified">0000-00-00 00:00:00</column>
+        </table>
+        <table name="media">
+            <column name="id">4</column>
+            <column name="user_id">1</column>
+            <column name="media_url">Soul II Soul - Keep On Movin.mp3</column>
+            <column name="description">Now we go way back with throwbacks hit by soul2soul</column>
+            <column name="created">2017-11-27 19:52:29</column>
+            <column name="modified">0000-00-00 00:00:00</column>
+        </table>
+        <table name="media">
+            <column name="id">5</column>
+            <column name="user_id">1</column>
+            <column name="media_url">Blood Sisters &amp; One Blood - Dub My Bell.mp3</column>
+            <column name="description">Another throwbacks by blood sisters, ring by bell</column>
+            <column name="created">2017-11-27 20:02:46</column>
+            <column name="modified">0000-00-00 00:00:00</column>
+        </table>
+        <table name="media">
+            <column name="id">6</column>
+            <column name="user_id">1</column>
+            <column name="media_url">J Axwell Vs Bronski Beat - Tell Me Why.mp3</column>
+            <column name="description">Another hit track by j-axwell, tell me why</column>
+            <column name="created">2017-11-27 20:03:32</column>
+            <column name="modified">2017-11-27 20:05:20</column>
+        </table>
+        <!-- Table playlist -->
+        <table name="playlist">
+            <column name="media_id">5</column>
+            <column name="user_id">1</column>
+            <column name="media_url">Blood Sisters &amp;amp; One Blood - Dub My Bell.mp3</column>
+            <column name="created">2017-11-30 20:29:16</column>
+        </table>
+        <table name="playlist">
+            <column name="media_id">4</column>
+            <column name="user_id">1</column>
+            <column name="media_url">Soul II Soul - Keep On Movin.mp3</column>
+            <column name="created">2017-12-01 21:27:04</column>
+        </table>
+        <table name="playlist">
+            <column name="media_id">3</column>
+            <column name="user_id">1</column>
+            <column name="media_url">Brutal Sounding Porsche PanameraS.mp4</column>
+            <column name="created">2017-12-01 21:28:33</column>
+        </table>
+        <!-- Table recovery -->
+        <!-- Table users -->
+        <table name="users">
+            <column name="id">1</column>
+            <column name="firstname">Lucky</column>
+            <column name="lastname">Molefe</column>
+            <column name="username">luckyMo</column>
+            <column name="email">luckmolf@company.com</column>
+            <column name="password">771669382ce0300b963293ddabd9aef9e8e36c6b</column>
+            <column name="status">1</column>
+            <column name="created">2017-11-24 12:44:00</column>
+        </table>
+    </database>
+</pma_xml_export>

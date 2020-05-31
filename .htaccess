@@ -1,0 +1,18 @@
+Options +FollowSymlinks
+RewriteEngine On
+
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+#this below statements redirects page to error pages if page does not exists
+ErrorDocument 404 /mediastreamer/errorpages/
+
+RewriteRule ^login([a-z]+)?$   login.php [NC,L]
+RewriteRule ^signup([a-z]+)?$   signup.php [NC,L]
+RewriteRule ^reset([a-z]+)?$   passwordreset.php [NC,L]
+RewriteRule ^home([a-z]+)?$   index.php [NC,L]
+RewriteRule ^home/([a-zA-Z0-9_.-]+)?$   index.php?sourceurl=$1 [NC,L]
+RewriteRule ^verify([a-z]+)?$   verify.php [NC,L]
+
+RewriteRule ^signout/([a-z_-]+)$   controller.php?signout=$1 [NC,L]
+RewriteRule ^verifyreset/([a-z]+)/([a-zA-Z0-9=]+)/([a-zA-Z0-9]+)$   controller.php?processReset=$1&email=$2&token=$3 [NC,L]
+RewriteRule ^confirm/([a-z]+)/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)$		controller.php?confirm=$1&verification=$2&token=$3 [NC,L]

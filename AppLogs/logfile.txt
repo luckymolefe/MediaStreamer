@@ -1,0 +1,4 @@
+TIMESTAMP			ACTION
+---------			------
+2017-12-23 02:04:01	user: chris@company.com changed message status on followers table.
+2017-12-27 00:38:55	user: chris@company.com changed message status on followers table.

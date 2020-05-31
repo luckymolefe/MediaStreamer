@@ -1,0 +1,22 @@
+/**
+ Export to JSON plugin for PHPMyAdmin
+ @version 0.1
+ */
+
+// Database 'mediastreamer'
+
+// mediastreamer.likes
+
+[{"user_id":"1","media_id":"5","created":"2017-12-01 01:57:46"}]
+
+// mediastreamer.media
+
+[{"id":"1","user_id":"1","media_url":"David_Guetta_Memories.mp3","description":"Listen to this hit by david guetta","created":"2017-11-27 18:57:33","modified":"0000-00-00 00:00:00"}, {"id":"2","user_id":"1","media_url":"bmwracing.mp4","description":"Watch this hot race lambo and bmw M5","created":"2017-11-27 19:08:21","modified":"0000-00-00 00:00:00"}, {"id":"3","user_id":"1","media_url":"Brutal Sounding Porsche PanameraS.mp4","description":"Listen to this ravaging Porsche with brutal sound","created":"2017-11-27 19:40:24","modified":"0000-00-00 00:00:00"}, {"id":"4","user_id":"1","media_url":"Soul II Soul - Keep On Movin.mp3","description":"Now we go way back with throwbacks hit by soul2soul","created":"2017-11-27 19:52:29","modified":"0000-00-00 00:00:00"}, {"id":"5","user_id":"1","media_url":"Blood Sisters & One Blood - Dub My Bell.mp3","description":"Another throwbacks by blood sisters, ring by bell","created":"2017-11-27 20:02:46","modified":"0000-00-00 00:00:00"}, {"id":"6","user_id":"1","media_url":"J Axwell Vs Bronski Beat - Tell Me Why.mp3","description":"Another hit track by j-axwell, tell me why","created":"2017-11-27 20:03:32","modified":"2017-11-27 20:05:20"}]
+
+// mediastreamer.playlist
+
+[{"media_id":"5","user_id":"1","media_url":"Blood Sisters &amp; One Blood - Dub My Bell.mp3","created":"2017-11-30 20:29:16"}, {"media_id":"4","user_id":"1","media_url":"Soul II Soul - Keep On Movin.mp3","created":"2017-12-01 21:27:04"}, {"media_id":"3","user_id":"1","media_url":"Brutal Sounding Porsche PanameraS.mp4","created":"2017-12-01 21:28:33"}]
+
+// mediastreamer.users
+
+[{"id":"1","firstname":"Lucky","lastname":"Molefe","username":"luckyMo","email":"luckmolf@company.com","password":"771669382ce0300b963293ddabd9aef9e8e36c6b","status":"1","created":"2017-11-24 12:44:00"}]

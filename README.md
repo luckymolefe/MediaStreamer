@@ -12,7 +12,7 @@
 
 
 ## `Screenshots`
-![](/tree/streamer/mediastreamer.JPG)
+![](tree/streamer/mediastreamer.JPG)
 
 <!--
 ## `Live Demo`

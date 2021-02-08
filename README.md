@@ -12,7 +12,7 @@
 
 
 ## `Screenshots`
-![](https://github.com/luckymolefe/MediaStreamer/tree/streamer/mediastreamer.JPG)
+![](MediaStreamer/tree/streamer/mediastreamer.JPG)
 
 <!--
 ## `Live Demo`
